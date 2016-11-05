@@ -53,7 +53,7 @@ func TestContextPropagated(t *testing.T) {
 			},
 		},
 	})
-	myNameSchema, err := graphql.NewSchema(graphql.SchemaConfig{myNameQuery, nil})
+	myNameSchema, err := graphql.NewSchema(graphql.SchemaConfig{Query: myNameQuery})
 	if err != nil {
 		t.Fatal(err)
 	}
